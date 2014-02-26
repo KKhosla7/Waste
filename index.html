@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS - Bootstrap Study</title>
+    <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="blog.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,600' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    </style>
+</head>
+<body ng-app="BasicAppCtrl">
+
+<div class="container">
+
+    <!--<h3 class="text-center">PythonicWay - Learn the Hard Way</h3>-->
+
+
+    <div class="jumbotron banner">
+
+        <div class="container">
+
+            <h1 class="text-center">Pythonic Way - Learn the Hard Way</h1>
+
+            <p>
+                Python is a interpreted, high-level language that allows us to write code, i.e, short, precise and understandable.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-sm-4"  style="margin-top: 35px;">
+
+        <div class="subscribe-mailing-list" style="margin-bottom: 35px;">
+            <h3>Please rate this blog</h3>
+            <div style="margin-bottom: 30px"></div>
+
+            <label class="radio">
+                <input type="radio"/> Bad
+            </label>
+            <label class="radio">
+                <input type="radio"/> Good
+            </label>
+            <label class="radio">
+                <input type="radio"/> Interesting
+            </label>
+
+            <div class="text-right">
+                <a href="#">View Ratings</a>
+            </div>
+        </div>
+
+        <div class="subscribe-mailing-list" style="margin-bottom: 35px;">
+            <a href="#">
+                <img src="prime.jpg" alt="Karan Khosla" class="img-rounded" width="60px" />
+            </a>
+            <span class="info h3">About Me</span>
+
+            <p class="intro">
+                Hi there, thanks for stopping by. I welcome you to my blog.
+                You must be wondering
+                <span style="font-weight: bold">who am I?</span>
+                I'm Karan Khosla, the blog owner. I warmly welcome you.
+            </p>
+
+        </div>
+
+        <div class="subscribe-mailing-list" style="margin-bottom: 35px;">
+            <h3>Archives</h3>
+            <ol class="list-unstyled">
+                <li><a href="#"> February 2014 </a> </li>
+                <li><a href="#"> January 2014 </a> </li>
+                <li><a href="#"> December 2014 </a> </li>
+                <li><a href="#"> November 2014 </a> </li>
+                <li><a href="#"> October 2014 </a> </li>
+                <li><a href="#"> September 2014 </a> </li>
+                <li><a href="#"> August 2014 </a> </li>
+            </ol>
+        </div>
+
+        <div class="subscribe-mailing-list" style="margin-bottom: 35px;">
+            <h3>Top Blog Posts</h3>
+            <ol class="list-unstyled">
+                <li><a href="#"> Sample Post 1 </a> </li>
+                <li><a href="#"> Sample Post 3 </a> </li>
+                <li><a href="#"> Sample Post 4 </a> </li>
+                <li><a href="#"> Sample Post 2 </a> </li>
+
+            </ol>
+        </div>
+
+        <div class="subscribe-mailing-list" style="margin-bottom: 35px;">
+            <h3>Elewhere</h3>
+            <ol class="list-unstyled">
+                <li><a href="#"> Github </a> </li>
+                <li><a href="#"> LinkedIn </a> </li>
+                <li><a href="#"> Facebook </a> </li>
+                <li><a href="#"> Twitter </a> <span class="badge">42</span> </li>
+
+            </ol>
+        </div>
+
+        <div class="subscribe-mailing-list" style="margin-bottom: 35px;">
+            <h3>Search</h3>
+            <form action="#">
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search this site?"/>
+                    <span class="glyphicon input-group-btn search">
+                        <button class="btn btn-primary glyphicon-search" style="width: 80px;"></button>
+                    </span>
+                </div>
+            </form>
+        </div>
+
+        <div class="subscribe-mailing-list" style="margin-bottom: 35px;">
+            <h3>Stay updated, Subscribe to our newsletter.</h3>
+            <form action="#">
+                <div class="input-group">
+                    <input class="form-control" type="email" placeholder="Enter your Email Address"/>
+                    <span class="input-group-btn">
+                        <input class="btn btn-primary" type="button" value="Subscribe"/>
+                    </span>
+                </div>
+            </form>
+        </div>
+
+       <div class="auth-form-box" style="margin-bottom: 35px;">
+                <h3>Register</h3>
+                <form name="signup_form" novalidate ng-submit="signupForm()">
+                    <div class="form-group">
+                        <input class="form-control" name="email" type="email" placeholder="Email" ng-model="signup.email" ng-minlength="3" ng-maxlength="20" required />
+                        <div class="error" ng-show="signup_form.email.$dirty && signup_form.email.$invalid">
+
+                            <small class="error" ng-show="signup_form.email.$error.required">
+                                Your email is required.
+                            </small>
+
+                            <small class="error" ng-show="signup_form.email.$error.minlength">
+                                Your email is required to be at least 3 characters
+                            </small>
+
+                            <small class="error" ng-show="signup_form.email.$error.email">
+                                This is not a valid email.
+                            </small>
+
+                            <small class="error" ng-show="signup_form.email.$error.maxlength">
+                                Your email cannot be longer than 20 characters.
+                            </small>
+
+                        </div>
+                    </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Username"/>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="password" placeholder="Password"/>
+                </div>
+                <button class="btn bg-primary">Submit</button>
+            </form>
+
+        </div>
+
+        <div class="auth-form-box">
+
+            <form action="#">
+
+                <h3>Log In</h3>
+
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Username"/>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="password" placeholder="Password"/>
+                </div>
+                <button class="btn bg-primary">Log In</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-lg-8" style="margin-top: 35px;">
+
+        <div class="content">
+
+            <div class="h3 post-title" style="font-weight: bold">
+                Sample Post 1
+            </div>
+
+            <div class="text-muted post-details">
+                <a href="#"> <img src="prime.jpg" class="img-rounded" width="35px" alt="Karan Khosla" /> </a> Posted on Tue, 13:00 Hrs, Mar, 2014 by <a href="#"> Karan Khosla</a>
+            </div>
+
+            <div class="post-content">
+                Python is a interpreted, high-level language that allows us to write code, i.e, short, precise and understandable.
+            </div>
+
+            <div class="post-footer">
+                <h3>If you find this post helpful then don't forget to vote</h3>
+                <label class="radio-inline">
+                    <input type="radio"/> Bad
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Good
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Interesting
+                </label>
+            </div>
+
+        </div>
+
+        <div class="content">
+
+            <div class="h3 post-title">
+                Sample Post 2
+            </div>
+
+            <div class="text-muted post-details">
+                <a href="#"> <img src="prime.jpg" class="img-rounded" width="35px" alt="Karan Khosla" /> </a> Posted on Tue, 13:00 Hrs, Mar, 2014 by <a href="#"> Karan Khosla</a>
+            </div>
+
+            <div class="post-content">
+                Python is a interpreted, high-level language that allows us to write code, i.e, short, precise and understandable.
+            </div>
+
+            <div class="post-footer">
+                <h3>If you find this post helpful then don't forget to vote</h3>
+                <label class="radio-inline">
+                    <input type="radio"/> Bad
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Good
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Interesting
+                </label>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="h3 post-title">
+                Sample Post 3
+            </div>
+
+            <div class="text-muted post-details">
+                <a href="#"> <img src="prime.jpg" class="img-rounded" width="35px" alt="Karan Khosla" /> </a> Posted on Tue, 13:00 Hrs, Mar, 2014 by <a href="#"> Karan Khosla</a>
+            </div>
+
+            <div class="post-content">
+                Python is a interpreted, high-level language that allows us to write code, i.e, short, precise and understandable.
+            </div>
+
+            <div class="post-footer">
+                <h3>If you find this post helpful then don't forget to vote</h3>
+                <label class="radio-inline">
+                    <input type="radio"/> Bad
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Good
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Interesting
+                </label>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="h3 post-title">
+                Sample Post 4
+            </div>
+
+            <div class="text-muted post-details">
+                <a href="#"> <img src="prime.jpg" class="img-rounded" width="35px" alt="Karan Khosla" /> </a> Posted on Tue, 13:00 Hrs, Mar, 2014 by <a href="#"> Karan Khosla</a>
+            </div>
+
+            <div class="post-content">
+                Python is a interpreted, high-level language that allows us to write code, i.e, short, precise and understandable.
+            </div>
+
+            <div class="post-footer">
+                <h3>If you find this post helpful then don't forget to vote</h3>
+                <label class="radio-inline">
+                    <input type="radio"/> Bad
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Good
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Interesting
+                </label>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="h3 post-title">
+                Sample Post 5
+            </div>
+
+            <div class="text-muted post-details">
+                <a href="#"> <img src="prime.jpg" class="img-rounded" width="35px" alt="Karan Khosla" /> </a> Posted on Tue, 13:00 Hrs, Mar, 2014 by <a href="#"> Karan Khosla</a>
+            </div>
+
+            <div class="post-content">
+                Python is a interpreted, high-level language that allows us to write code, i.e, short, precise and understandable.
+            </div>
+
+            <div class="post-footer">
+                <h3>If you find this post helpful then don't forget to vote</h3>
+                <label class="radio-inline">
+                    <input type="radio"/> Bad
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Good
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Interesting
+                </label>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="h3 post-title">
+                Sample Post 6
+            </div>
+
+            <div class="text-muted post-details">
+                <a href="#"> <img src="prime.jpg" class="img-rounded" width="35px" alt="Karan Khosla" /> </a> Posted on Tue, 13:00 Hrs, Mar, 2014 by <a href="#"> Karan Khosla</a>
+            </div>
+
+            <div class="post-content">
+                Python is a interpreted, high-level language that allows us to write code, i.e, short, precise and understandable.
+            </div>
+
+            <div class="post-footer">
+                <h3>If you find this post helpful then don't forget to vote</h3>
+                <label class="radio-inline">
+                    <input type="radio"/> Bad
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Good
+                </label>
+                <label class="checkbox-inline">
+                    <input type="radio"/> Interesting
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <div>
+        <div style="float: left !important;">
+            <span class="glyphicon glyphicon-copyright-mark"></span>
+            <span>
+                2013-2014, Prime Productions Inc.
+            </span>
+        </div>
+
+        <div style="float: right !important;">
+            <a href="#"><span class="glyphicon glyphicon-arrow-up"></span> Back to top </a>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="static/bower_components/jquery/dist/jquery.js"></script>
+<script src="static/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="static/bower_components/angular/angular.js"></script>
+<script>
+
+    var basicAppCtrlModule = angular.module('BasicAppCtrl', []);
+
+    basicAppCtrlModule.controller("greetTextControl", function ($scope) {
+        $scope.model = {
+            greetingMessage: "Hello World!"
+        }
+    });
+
+
+    /*basicAppCtrlModule.directive("ngKaran", function () {
+        return {
+            restrict: 'A',
+            template: '<div class="text-muted">Hellio, Karan</div>'
+        }
+    })*/
+
+</script>
+</body>
+</html>
