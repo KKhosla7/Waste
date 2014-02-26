@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pin_Clone</title>
+    <link rel="stylesheet" href="static/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="blog.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Rancho' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="container">
+
+        <div class="jumbotron banner">
+
+            <div class="container">
+
+                <h1 class="text-center">Kittens Livelyhood</h1>
+
+                <p>
+                    This is in regards with something you won't believe that I have written bullshit here just for the testing purpose.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-sm-4"  style="margin-top: 35px;">
+
+            <div class="subscribe-mailing-list" style="margin-bottom: 35px;">
+                <h3>Please rate this blog</h3>
+                <div style="margin-bottom: 30px"></div>
+
+                <label class="radio">
+                    <input type="radio"/> Bad
+                </label>
+                <label class="radio">
+                    <input type="radio"/> Good
+                </label>
+                <label class="radio">
+                    <input type="radio"/> Interesting
+                </label>
+
+                <div class="text-right">
+                    <a href="#">View Ratings</a>
+                </div>
+            </div>
+
+            <div class="subscribe-mailing-list" style="margin-bottom: 35px;">
+                <a href="#">
+                    <img src="prime.jpg" alt="Karan Khosla" class="img-rounded" width="60px" />
+                </a>
+                <span class="info h3">About Me</span>
+
+                <p class="intro">
+                    Hi there, thanks for stopping by. I welcome you to my blog.
+                    You must be wondering
+                    <span style="font-weight: bold">who am I?</span>
+                    I'm Karan Khosla, the blog owner. I warmly welcome you.
+                </p>
+
+            </div>
+
+            <div class="subscribe-mailing-list" style="margin-bottom: 35px;">
+                <h3>Search</h3>
+                <form action="#">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Search this site?"/>
+                    <span class="glyphicon input-group-btn search">
+                        <button class="btn btn-primary glyphicon-search" style="width: 80px;"></button>
+                    </span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="subscribe-mailing-list" style="margin-bottom: 35px;">
+                <h3>Stay updated, Subscribe to our newsletter.</h3>
+                <form action="#">
+                    <div class="input-group">
+                        <input class="form-control" type="email" placeholder="Enter your Email Address"/>
+                    <span class="input-group-btn">
+                        <input class="btn btn-primary" type="button" value="Subscribe"/>
+                    </span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="auth-form-box" style="margin-bottom: 35px;">
+                <h3>Register</h3>
+                <form name="signup_form" novalidate ng-submit="signupForm()">
+                    <div class="form-group">
+                        <input class="form-control" name="email" type="email" placeholder="Email" ng-model="signup.email" ng-minlength="3" ng-maxlength="20" required />
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Username"/>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="password" placeholder="Password"/>
+                    </div>
+                    <button class="btn bg-primary">Submit</button>
+                </form>
+
+            </div>
+
+            <div class="auth-form-box">
+
+                <form action="#">
+
+                    <h3>Log In</h3>
+
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Username"/>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="password" placeholder="Password"/>
+                    </div>
+                    <button class="btn bg-primary">Log In</button>
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-8" style="margin-top: 35px;">
+
+            <ul class="list-unstyled">
+                <li class="col-sm-5">
+                    <div class="thumbnail">
+                        <img src="http://placekitten.com/300/250" width="150px">
+                        <div class="caption">
+                            <h3>Holding Cloth</h3>
+                            <p>Bacon ipsum dolor sit amet sirloin pancetta shoulder tongue doner,
+                                shank sausage.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Eat now!</a>
+                                <a href="#" class="btn btn-default">Later...</a></p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="col-sm-5">
+                    <div class="thumbnail">
+                        <img src="http://placekitten.com/300/270" width="150px">
+                        <div class="caption">
+                            <h3>Kitten Basket</h3>
+                            <p>Bacon ipsum dolor sit amet sirloin pancetta shoulder tongue doner,
+                                shank sausage.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Eat now!</a>
+                                <a href="#" class="btn btn-default">Later...</a></p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="col-sm-5">
+                    <div class="thumbnail">
+                        <img src="http://placekitten.com/300/252" width="150px">
+                        <div class="caption">
+                            <h3>Sweet Stay</h3>
+                            <p>Bacon ipsum dolor sit amet sirloin pancetta shoulder tongue doner,
+                                shank sausage.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Eat now!</a>
+                                <a href="#" class="btn btn-default">Later...</a></p>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="col-sm-5">
+                    <div class="thumbnail">
+                        <img src="http://placekitten.com/300/254" width="150px">
+                        <div class="caption">
+                            <h3>Sky</h3>
+                            <p>Bacon ipsum dolor sit amet sirloin pancetta shoulder tongue doner,
+                                shank sausage.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Eat now!</a>
+                                <a href="#" class="btn btn-default">Later...</a></p>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="col-sm-5">
+                    <div class="thumbnail">
+                        <img src="http://placekitten.com/300/262" width="150px">
+                        <div class="caption">
+                            <h3>Sleepy</h3>
+                            <p>Bacon ipsum dolor sit amet sirloin pancetta shoulder tongue doner,
+                                shank sausage.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Eat now!</a>
+                                <a href="#" class="btn btn-default">Later...</a></p>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="col-sm-5">
+                    <div class="thumbnail">
+                        <img src="http://placekitten.com/300/256" width="150px">
+                        <div class="caption">
+                            <h3>Lucky Stair</h3>
+                            <p>Bacon ipsum dolor sit amet sirloin pancetta shoulder tongue doner,
+                                shank sausage.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Eat now!</a>
+                                <a href="#" class="btn btn-default">Later...</a></p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="col-sm-5">
+                    <div class="thumbnail">
+                        <img src="http://placekitten.com/300/240" width="150px">
+                        <div class="caption">
+                            <h3>Hard Luck</h3>
+                            <p>Bacon ipsum dolor sit amet sirloin pancetta shoulder tongue doner,
+                                shank sausage.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Eat now!</a>
+                                <a href="#" class="btn btn-default">Later...</a></p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="col-sm-5">
+                    <div class="thumbnail">
+                        <img src="http://placekitten.com/300/259" width="150px">
+                        <div class="caption">
+                            <h3>Aw Cute</h3>
+                            <p>Bacon ipsum dolor sit amet sirloin pancetta shoulder tongue doner,
+                                shank sausage.</p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Eat now!</a>
+                                <a href="#" class="btn btn-default">Later...</a></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <div style="float: left !important;">
+                <span class="glyphicon glyphicon-copyright-mark"></span>
+            <span>
+                2013-2014, Prime Productions Inc.
+            </span>
+            </div>
+
+            <div style="float: right !important;">
+                <a href="#"><span class="glyphicon glyphicon-arrow-up"></span> Back to top </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="static/bower_components/jquery/dist/jquery.js"></script>
+    <script src="static/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
